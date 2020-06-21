@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('homebefore', function () {
+    return view('mainbefore');
+});
+
+Route::get('homeafter', function () {
+    return view('mainafter');
+});
+
 //donatur
 Route::get('/donatur','DonaturController@index');
 Route::get('/donatur/tambah','DonaturController@tambah');
@@ -62,7 +71,7 @@ Route::put('/peserta/update/{id}', 'PesertaController@update');
 Route::get('/peserta/delete/{id}', 'PesertaController@delete');
 Route::get('/peserta/find','PesertaController@find'); 
 
-
+//Transaksi
 Route::get('/transaksi','TransaksiController@index'); 
 Route::get('/transaksi/tambah','TransaksiController@tambah');
 Route::post('/transaksi/store', 'TransaksiController@store');
